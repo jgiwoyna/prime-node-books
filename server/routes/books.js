@@ -14,6 +14,7 @@ router.get('/', function(req, res) {
 
     client.query('SELECT * FROM books', function(err, result) {
       done(); // close the connection.
+      console.log(result.rows);
 
       // console.log('the client!:', client);
 
@@ -37,9 +38,9 @@ router.post('/', function(req, res) {
     }
 
     client.query(
-      'INSERT INTO books (title, author, published, genre) ' +
-      'VALUES ($1, $2, $3, $4)',
-      [newBook.title, newBook.author, newBook.published, newBook.genre],
+      'INSERT INTO books (title, author, published, genre, edition, publisher) ' +
+      'VALUES ($1, $2, $3, $4, $5, $6)',
+      [newBook.title, newBook.author, newBook.published, newBook.genre, newBook.edition, newBook.publisher],
       function(err, result) {
         done();
 

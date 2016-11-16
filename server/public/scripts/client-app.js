@@ -49,8 +49,8 @@ function postBook() {
 }
 
 function appendBooks(books) {
-  $("#books-list").empty();
-
+  $("#book-list").empty();
+console.log(books);
   for (var i = 0; i < books.length; i++) {
     $("#book-list").append('<div class="row book"></div>');
     $el = $('#book-list').children().last();
@@ -58,5 +58,7 @@ function appendBooks(books) {
     $el.append('<p> ' + books[i].author + '</p>');
     $el.append('<p> ' + books[i].genre + '</p>');
     $el.append('<p> ' + books[i].published + '</p>');
+    $el.append('<p> ' + books[i].edition + '</p>');
+    $el.append('<p> ' + books[i].publisher + '</p>');
   }
 }

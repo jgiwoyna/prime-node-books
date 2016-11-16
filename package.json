@@ -13,5 +13,13 @@
     "body-parser": "^1.15.1",
     "express": "^4.13.4",
     "pg": "^6.1.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgiwoyna/prime-node-books.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jgiwoyna/prime-node-books/issues"
+  },
+  "homepage": "https://github.com/jgiwoyna/prime-node-books#readme"
 }
